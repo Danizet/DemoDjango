@@ -1,0 +1,58 @@
+{% extends 'layaouts/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            background-image: url("{% static 'fondo.png' %}");
+            background-size: cover;
+            background-position: center;
+        }
+        #container1 {
+            margin-top: 70px;
+        }
+        #lentes {
+            width: 900px;
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container1">
+        <picture>
+            <img src="{% static 'lentes.png' %}" alt="left" width="800" style="position: absolute; top: -80px; left: -250px;">
+
+            <tool-tip role="tooltip" alt="left" style="position: absolute; top: 10px; left: 700px; width: 300px;">
+                <style>
+                    tool-tip h1 {
+                      font-size: 40px;
+                      font-family: Arial, Helvetica, sans-serif;
+                      width: 500px;
+                    }
+                  </style>
+                <h1>Esta página web fue creada por <b>LA URSS</b> utilizando el lenguaje de programación Python 3 y el framework
+                    Django. También se utilizaron tecnologías como CSS y JavaScript para mejorar la apariencia y funcionalidad
+                    de la página. La fecha de creación de esta página es 02/04/2023."</h1><b>Quiero mimir</b>
+            </tool-tip>
+        </picture>
+    </div>
+
+</body>
+
+</html>
+
+{% endblock %}

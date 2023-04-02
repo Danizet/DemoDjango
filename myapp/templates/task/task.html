@@ -1,0 +1,29 @@
+{% extends 'layaouts/base.html' %}
+
+{% block content %}
+
+<h1>Task</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos iure libero, ipsa sequi modi ea ex natus, exercitationem fuga, tempora vel nesciunt quibusdam quasi officia dolorum. Ducimus, rerum debitis. Esse repudiandae fugiat nihil numquam? Eum, amet. Totam accusamus aperiam molestias nemo iste ipsa aliquam, quam facere modi nihil vel voluptates!.</p>
+
+{% for task in tasks %}
+<!-- Comentario que si se vera en html-->
+<div>
+
+    {# Nota: esto es un comentario q no aparecera en la web ni inspeccionandola #}
+    <h1>{% if task.done == False %} 🕑 {% else %} ✅ {% endif %}         {{task.tittle}}</h1>
+    
+    <p>{{task.description}}</p>
+    <p>Project : {{task.project}}</p>
+    <button>
+        Delete
+    </button>
+    <button>
+        Update
+    </button>
+    <button>
+        ✅ Done
+    </button>
+</div>
+
+{% endfor %}
+{% endblock %}

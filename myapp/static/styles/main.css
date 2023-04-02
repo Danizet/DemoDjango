@@ -1,0 +1,79 @@
+body{
+    background: #202020;
+    color: rgb(115, 23, 23);
+}
+
+.navbar {
+    background: #000000;
+    padding: 10px 0;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.navbar ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+
+}
+
+.navbar ul li a:hover {
+    color: rgb(11, 225, 7);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 10px;
+}
+
+.container1 {
+    max-width: 1200px;
+    margin-top: -270px;
+    margin-left: 300px;
+    margin-bottom: -650;
+    padding: 10px 0;
+}
+
+.card{
+    background: whitesmoke;
+    color: black;
+    padding: 20px 0;
+    margin-bottom: 3px;
+}
+
+tool-tip{
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    box-shadow: 1 1 10px #ffffff;
+    padding: .5rem 8rem;
+    font-size: .80rem;
+    border-radius: 80px;
+    top: 100%;
+    left: 100%;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+
+}
+
+:has(> tool-tip ){
+    position: relative;
+}
+
+:has(> tool-tip ):hover tool-tip{
+    opacity: 1; 
+}  
+

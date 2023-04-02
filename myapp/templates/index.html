@@ -1,0 +1,45 @@
+{% extends 'layaouts/base2.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div>
+<body style="text-align:center;">
+
+</body>
+
+<h1>{{ tittle }}</h1>
+
+<img src="{% static 'lentes.png' %}" alt="" width="150">
+
+<h2>Aplicacion construccion</h2>
+
+<head>
+  <style>
+  div {
+    background-image: url("{% static 'mecanica.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    /*background-color: white;*/
+    border: 2px solid black;
+    color: black;
+    padding: 30px;
+    margin: 300px;
+  }
+  </style>
+  </head>
+  <body style="text-align:left;">
+
+  <h1>¿Necesitas un plomero, un electricista o un jardinero?</h1>
+  <h3>¿No sabes dónde buscar ni cómo contactarlos? No te preocupes, ponte en idea. Con nuestra aplicación, puedes encontrar fácilmente profesionales de trabajos informales cerca de ti, con precios justos y garantía de calidad.</h3>
+  <h2>Ponte en idea, la app que te conecta con los mejores servicios.</h2>
+
+  </body>
+
+</div>
+
+
+
+
+{% endblock %}
